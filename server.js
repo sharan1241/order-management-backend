@@ -27,8 +27,11 @@ const importData = async()=>{
         process.exit(1)
     }
 }
+useEffect(() => {
+    importData()
+}, [])
 
-importData()
+
 
 const app = express()
 app.use(cors())
